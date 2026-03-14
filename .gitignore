@@ -1,1 +1,26 @@
+# Python
+__pycache__/
+*.py[codz]
+*.so
+
+# Environments
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Frontend
+node_modules/
+dist/
+build/
+.next/
+
+# Custom
 bias_multitask_model/*.pt
+data/models/*.pt
+byeias.logs

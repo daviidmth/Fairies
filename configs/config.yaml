@@ -1,0 +1,42 @@
+backend:
+  logging:
+    path: byeias.log
+    level: INFO
+    max_bytes: 5000000
+    backup_count: 3
+    format: "%(asctime)s [%(levelname)s] %(name)s - %(message)s"
+    date_format: "%Y-%m-%d %H:%M:%S"
+
+  classification:
+    model_name: microsoft/deberta-v3-large
+    tokenizer_max_length: 256
+    dropout_rate: 0.3
+    sexism_num_labels: 2
+    racism_num_labels: 2
+    loss_ignore_index: -1
+    default_device: auto
+
+    dataloader:
+      default_batch_size: 8
+      train_shuffle: true
+      eval_shuffle: false
+
+    training:
+      default_epochs: 3
+      default_learning_rate: 0.00001
+      best_model_path: data/models/best_model_weights.pt
+
+    dataset:
+      fillna_context: ""
+      required_columns:
+        - input_ids
+        - attention_mask
+        - sexism_label
+        - racism_label
+  llm:
+    model_name: mistralai/Mistral-Large-3.1
+    max_tokens: 1000
+    temperature: 0.7
+    api_key: ...
+    # api_key: ${MISTRAL_API_KEY}
+    system_prompt: data\system_prompt.txt

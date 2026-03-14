@@ -1,0 +1,119 @@
+2026-03-14 15:34:27 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 15:34:31 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 15:34:37 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 15:34:56 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 0.7942
+2026-03-14 15:34:58 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.7864
+2026-03-14 15:34:58 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 15:35:00 [INFO] byeias.bias_model - Model weights saved to: models/best_model_weights.pt
+2026-03-14 15:35:00 [INFO] byeias.bias_model - New best model saved | val_loss=0.7864
+2026-03-14 15:35:00 [INFO] byeias.bias_model - Training completed
+2026-03-14 15:35:00 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 15:35:19 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 15:35:22 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 15:35:29 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 15:35:50 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 1.5157
+2026-03-14 15:35:52 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.7921
+2026-03-14 15:35:52 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 15:35:54 [INFO] byeias.bias_model - Model weights saved to: models/best_model_weights.pt
+2026-03-14 15:35:54 [INFO] byeias.bias_model - New best model saved | val_loss=0.7921
+2026-03-14 15:35:54 [INFO] byeias.bias_model - Training completed
+2026-03-14 15:35:54 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 15:36:27 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 15:36:30 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 15:36:33 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 15:36:52 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 1.1277
+2026-03-14 15:36:54 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.7121
+2026-03-14 15:36:54 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 15:36:56 [INFO] byeias.bias_model - Model weights saved to: models/best_model_weights.pt
+2026-03-14 15:36:56 [INFO] byeias.bias_model - New best model saved | val_loss=0.7121
+2026-03-14 15:36:56 [INFO] byeias.bias_model - Training completed
+2026-03-14 15:36:56 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 15:36:56 [INFO] byeias.bias_model - Inference completed | samples=5
+2026-03-14 15:46:28 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 15:46:30 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 15:46:35 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 15:46:53 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 1.5946
+2026-03-14 15:46:55 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.8744
+2026-03-14 15:46:55 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 15:46:57 [INFO] byeias.bias_model - Model weights saved to: models/best_model_weights.pt
+2026-03-14 15:46:57 [INFO] byeias.bias_model - New best model saved | val_loss=0.8744
+2026-03-14 15:46:57 [INFO] byeias.bias_model - Training completed
+2026-03-14 15:46:57 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 15:46:57 [INFO] byeias.bias_model - Inference completed | samples=5
+2026-03-14 15:57:17 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistral-large-latest max_tokens=1000 temperature=0.70
+2026-03-14 15:57:17 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 15:57:47 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistral-large-latest max_tokens=1000 temperature=0.70
+2026-03-14 15:57:47 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 16:58:13 [INFO] byeias.text_extractor - PDF text extractor initialized | language=english
+2026-03-14 16:58:13 [INFO] byeias.text_extractor - Starting PDF extraction | pages=1 path=data\tmp_extraction_test.pdf
+2026-03-14 16:58:13 [WARNING] byeias.text_extractor - No extractable text found in PDF: data\tmp_extraction_test.pdf
+2026-03-14 17:07:24 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistral-large-latest max_tokens=1000 temperature=0.70
+2026-03-14 17:07:24 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 17:15:07 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 17:15:10 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 17:15:14 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 17:15:35 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 0.8813
+2026-03-14 17:15:36 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.6986
+2026-03-14 17:15:36 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 17:15:38 [INFO] byeias.bias_model - Model weights saved to: C:\Users\david\OneDrive\Desktop\Byeias\data\models\best_model_weights.pt
+2026-03-14 17:15:38 [INFO] byeias.bias_model - New best model saved | val_loss=0.6986
+2026-03-14 17:15:38 [INFO] byeias.bias_model - Training completed
+2026-03-14 17:15:39 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 17:15:40 [INFO] byeias.bias_model - Inference completed | samples=5
+2026-03-14 17:18:07 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:20:10 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:21:45 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:22:32 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:23:11 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:23:11 [INFO] byeias.text_extractor - Starting PDF extraction | pages=23 path=..\..\..\..\data\Businessplan_Halo_AktuellerStand.pdf
+2026-03-14 17:23:11 [INFO] byeias.text_extractor - Sentence extraction completed | sentences=346
+2026-03-14 17:23:20 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:23:20 [INFO] byeias.text_extractor - Starting PDF extraction | pages=23 path=..\..\..\..\data\Businessplan_Halo_AktuellerStand.pdf
+2026-03-14 17:23:20 [INFO] byeias.text_extractor - Sentence extraction completed | sentences=346
+2026-03-14 17:23:20 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 17:23:23 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 17:23:29 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 17:23:48 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 1.5331
+2026-03-14 17:23:50 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.8929
+2026-03-14 17:23:50 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 17:23:52 [INFO] byeias.bias_model - Model weights saved to: C:\Users\david\OneDrive\Desktop\Byeias\data\models\best_model_weights.pt
+2026-03-14 17:23:52 [INFO] byeias.bias_model - New best model saved | val_loss=0.8929
+2026-03-14 17:23:52 [INFO] byeias.bias_model - Training completed
+2026-03-14 17:23:52 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 17:23:52 [INFO] byeias.bias_model - Inference completed | samples=5
+2026-03-14 17:53:13 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 17:53:26 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 17:55:15 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 17:55:26 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 17:56:12 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 17:57:35 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 17:58:03 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 17:58:03 [INFO] byeias.llm_communicator - LLM communicator initialized | model=gpt-3.5-turbo max_tokens=1000 temperature=0.70
+2026-03-14 18:03:28 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:03:30 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:03:31 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:03:36 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 18:03:36 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 18:03:37 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 18:03:37 [INFO] byeias.llm_communicator - Requesting LLM explanation
+2026-03-14 18:08:30 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:08:32 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:08:32 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:08:39 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:08:41 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:08:41 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:08:50 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:08:52 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:08:52 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:09:02 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:09:06 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:09:07 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:09:14 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:09:16 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:09:17 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:10:03 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:10:06 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:10:06 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 18:10:13 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
+2026-03-14 18:10:16 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 18:10:16 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
