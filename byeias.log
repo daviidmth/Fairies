@@ -117,3 +117,31 @@
 2026-03-14 18:10:13 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-large max_length=256
 2026-03-14 18:10:16 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
 2026-03-14 18:10:16 [INFO] byeias.llm_communicator - LLM communicator initialized | model=mistralai/Mistral-Large-3.1 max_tokens=1000 temperature=0.70
+2026-03-14 21:07:15 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 21:07:15 [INFO] byeias.text_extractor - Starting PDF extraction | pages=23 path=..\..\..\..\data\Businessplan_Halo_AktuellerStand.pdf
+2026-03-14 21:07:15 [INFO] byeias.text_extractor - Sentence extraction completed | sentences=346
+2026-03-14 21:07:20 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 21:07:23 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 21:07:26 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 21:07:35 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 1.1053
+2026-03-14 21:07:36 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.8039
+2026-03-14 21:07:36 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 21:07:37 [INFO] byeias.bias_model - Model weights saved to: C:\Users\david\OneDrive\Desktop\Byeias\data\models\best_model_weights.pt
+2026-03-14 21:07:37 [INFO] byeias.bias_model - New best model saved | val_loss=0.8039
+2026-03-14 21:07:37 [INFO] byeias.bias_model - Training completed
+2026-03-14 21:07:37 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 21:07:37 [INFO] byeias.bias_model - Inference completed | samples=5
+2026-03-14 21:14:29 [INFO] byeias.text_extractor - PDF text extractor initialized | language=german
+2026-03-14 21:14:29 [INFO] byeias.text_extractor - Starting PDF extraction | pages=23 path=..\..\..\..\data\Businessplan_Halo_AktuellerStand.pdf
+2026-03-14 21:14:29 [INFO] byeias.text_extractor - Sentence extraction completed | sentences=346
+2026-03-14 21:14:34 [INFO] byeias.bias_model - Pipeline initialized | device=cpu model=microsoft/deberta-v3-small max_length=256
+2026-03-14 21:14:36 [INFO] byeias.bias_model - Preparing and merging training and validation datasets...
+2026-03-14 21:14:39 [INFO] byeias.bias_model - Training started | total_train_samples=8 total_val_samples=4 epochs=1 batch_size=2 lr=2e-05
+2026-03-14 21:14:48 [INFO] byeias.bias_model - Epoch 1 - Avg Train Loss: 0.6658
+2026-03-14 21:14:49 [INFO] byeias.bias_model - Epoch 1 - Val Loss: 0.7688
+2026-03-14 21:14:49 [INFO] byeias.bias_model - Validation metrics | sexism_f1=0.3333 racism_f1=0.3333
+2026-03-14 21:14:50 [INFO] byeias.bias_model - Model weights saved to: C:\Users\david\OneDrive\Desktop\Byeias\data\models\best_model_weights.pt
+2026-03-14 21:14:50 [INFO] byeias.bias_model - New best model saved | val_loss=0.7688
+2026-03-14 21:14:50 [INFO] byeias.bias_model - Training completed
+2026-03-14 21:14:50 [INFO] byeias.bias_model - Inference started | samples=5
+2026-03-14 21:14:50 [INFO] byeias.bias_model - Inference completed | samples=5
