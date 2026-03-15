@@ -8,7 +8,7 @@ backend:
     date_format: "%Y-%m-%d %H:%M:%S"
 
   classification:
-    model_name: microsoft/deberta-v3-large
+    model_name: roberta-base
     tokenizer_max_length: 256
     dropout_rate: 0.3
     sexism_num_labels: 2
@@ -24,7 +24,7 @@ backend:
     training:
       default_epochs: 3
       default_learning_rate: 0.00001
-      best_model_path: data/models/best_model_weights.pt
+      best_model_path: data/models/full_model.pt
 
     dataset:
       fillna_context: ""

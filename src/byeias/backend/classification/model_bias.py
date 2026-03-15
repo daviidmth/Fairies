@@ -15,8 +15,8 @@ logger = get_logger("byeias.bias_model", BACKEND_CONFIG)
 CLASSIFICATION_CONFIG = BACKEND_CONFIG.classification
 
 
-class MultiTaskDeberta(nn.Module):
-    """Multi-task architecture based on DeBERTa-v3."""
+class MultiTaskRoberta(nn.Module):
+    """Multi-task architecture based on RoBERTa."""
 
     def __init__(
         self,
@@ -54,7 +54,7 @@ class MultiTaskDeberta(nn.Module):
             attention_mask=attention_mask,
             token_type_ids=token_type_ids,
         )
-        # Extract [CLS] token representation
+        # Extract [CLS] / <s> token representation
         pooled_output = outputs.last_hidden_state[:, 0, :].to(dtype=torch.float32)
         pooled_output = self.dropout(pooled_output)
 
@@ -90,7 +90,7 @@ class BiasDetectionPipeline:
         self.tokenizer: PreTrainedTokenizer = AutoTokenizer.from_pretrained(
             self.model_name
         )
-        self.model = MultiTaskDeberta(
+        self.model = MultiTaskRoberta(
             model_name=self.model_name,
             dropout_rate=self.dropout_rate,
             sexism_num_labels=CLASSIFICATION_CONFIG.sexism_num_labels,

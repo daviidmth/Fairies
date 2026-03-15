@@ -16,6 +16,25 @@ class BackendController:
         # LLM-Kommunikation
         self.llm = LLMCommunicator(model_name=llm_model, api_key=llm_api_key)
 
+    def process_data(self, input_text):
+        sentences = input_text.split(". ")
+        print("Eingabetext in Sätze aufgeteilt:", sentences)
+
+        inference_results = self.predict_bias(context_texts=sentences, target_texts=sentences)
+        explanations = [],
+        print("Inferenz-Ergebnisse:", inference_results)
+
+        for result in inference_results:
+            if result["is_biased"]:
+                explanation = self.explain_bias(
+                    context_before=result["context_before"],
+                    flagged_sentence=result["target_text"],
+                    context_after=result["context_after"],
+                )
+                explanations.append(explanation)
+        return explanations
+
+
     # --- Klassifikation ---
     def train_classifier(self, **kwargs):
         return self.classifier.train(**kwargs)
@@ -32,3 +51,15 @@ class BackendController:
     # --- LLM-Kommunikation ---
     def explain_bias(self, context_before, flagged_sentence, context_after):
         return self.llm.explain_bias(context_before, flagged_sentence, context_after)
+
+
+if __name__ == "__main__":
+    process_data = BackendController()
+    input_text = "Die Ärztin hat die Patientin untersucht. Der Ingenieur hat das Problem gelöst."
+    explanations = process_data.process_data(input_text)
+    for idx, explanation in enumerate(explanations):
+        print(f"Erklärung {idx+1}:")
+        print("Bias-Typ:", explanation.get("bias_type", "-"))
+        print("Erklärung:", explanation.get("explanation", "-"))
+        print("Umschreibvorschlag:", explanation.get("rewrite_suggestion", "-"))
+        print("-" * 40)
