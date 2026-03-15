@@ -1,7 +1,6 @@
 
-    ![Logo](data/pictures/Logo.png)
+![Logo](data/pictures/Logo.png)
 
-# MVP - Fairis
 The MVP is made of an backend and frontend which can be started through an Docker Container. Since you dont have the time to run the MVP the following will give you a qucik overview of the MVP.
 
 ## Frontend
