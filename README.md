@@ -1,98 +1,32 @@
-# 🔍 Two-Stage Bias & Sexism Scanner (Mistral Edition)
 
-> **Hackathon Project** — A "Filter-and-Refine" AI pipeline for educational textbook publishers to detect and neutralize biased language.
+    ![Logo](data/pictures/Logo.png)
 
-| Stage | Engine | Purpose |
-|-------|--------|---------|
-| **1 — Filter** | HuggingFace `valurank/distilroberta-bias` | Fast, local sentence classification |
-| **2 — Refiner** | Mistral AI `mistral-large-latest` | Explain bias + suggest inclusive rewrite |
+# MVP - Fairis
+The MVP is made of an backend and frontend which can be started through an Docker Container. Since you dont have the time to run the MVP the following will give you a qucik overview of the MVP.
 
----
+## Frontend
 
-## 📂 Project Structure
+THe following pitures show how the frontend of the mvp looks like and shows all the functions.
 
-```
-Byeias/
-├── configs/
-│   └── config.yaml       # Configuration file including Mistral properties
-├── data/
-│   ├── rules/            # Custom guidelines (e.g., eu_guidelines.txt)
-│   └── ...               # PDF documents to scan
-├── src/
-│   └── byeias/
-│       ├── backend/      # FastAPI application (Stages 1 & 2)
-│       └── frontend/     # React frontend prototype UI
-├── app.py                # Streamlit UI
-├── requirements.txt      # Python dependencies for the Streamlit app
-├── pyproject.toml        # Application dependencies (poetry)
-└── README.md
-```
+1. This is the general overview of the Frontend. There is a field where you can paste in the text you want to reviewe, if there is any bias. In the picture there is already an inserted text shown.
 
----
+    ![Diagramm](data/pictures/start_frontend.jpeg)
 
-## ⚡ Quick Start
+2. If you click process, the backend which is also explained in the next chapter, will check for biases.
 
-### 1. Install Dependencies
+    ![Diagramm](data/pictures/Result_frontend.jpeg)
 
-You can install the dependencies via Poetry:
+3. Now you can hover on the detected biases and you get an explanation what kind of bias it is and why it is a bias.
 
-```bash
-poetry install
-```
+    ![Diagramm](data/pictures/Hover%20function_frontend.jpeg)
 
-*(Note: Mistral requires `mistralai>=2.0.2`)*
+## Backend
 
-### 2. Configure API Key
+The following picture shows the pipeline which is implemented in the mvp. It is important to mention, that the function of pdf extraction is working in the backend but the implementation in the frontend is not made yet. The pipeline includes 3 components:
 
-Edit the `configs/config.yaml` file and insert your Mistral API Key at `model.mistral.api_key`.
+![Diagramm](data/pictures/Pipeline.png)
 
-### 3. Start the Backend API
+1. **Text processing module:** Extracts text from the input pdf, or receive the direct input text.
+2. **Bert classifier:** Detects Bias and categorizes between racism and sexism.
+3. **Mistral LLM:** The detect biases will be explained, why it is an bias and whats the problem with it.
 
-```bash
-cd src
-poetry run uvicorn byeias.backend.api:app --reload
-```
-
-The API runs at **http://localhost:8000** · Swagger docs at **http://localhost:8000/docs**
-
-### 4. Start the Streamlit Frontend (new terminal)
-
-```bash
-cd src\byeias\frontend
-npm run dev
-```
-
-Opens at **http://localhost:8501**
-
----
-
-## ⚛️ React Frontend Prototype (Bias Scanner UI)
-
-For the hackathon prototype UI (Grammarly-style Bias Scanner), a dedicated React frontend is available in `src/byeias/frontend/`.
-
-### Setup
-
-```bash
-cd src/byeias/frontend
-npm install
-```
-
-### Run in Development
-
-```bash
-npm run dev
-```
-
-Vite will print the local URL (typically **http://localhost:5173**).
-
-### Production Build
-
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
